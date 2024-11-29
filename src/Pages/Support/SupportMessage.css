@@ -1,0 +1,19 @@
+.support-message-wrapper{
+  margin-top: 50px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.thank-message{
+  color:orange;
+}
+
+.ticket-number{
+  color:white;
+}
+
+.ticket-number span{
+  color:grey;
+}
+
+

@@ -13,7 +13,7 @@ a{
 .calc-wrapper{
   background-color: black;
   flex-basis: 400px;
-  height: 540px;
+  height: 580px;
   padding: 20px 35px;
 }
 
@@ -22,8 +22,8 @@ a{
   color: white;
   font-size: 35px;
   text-align: right;
-  padding-top: 40px;
-  padding-bottom: 5px;
+  padding-top: 60px;
+  /* padding-bottom: 5px; */
   padding-left: 20px;
   padding-right: 15px;
   overflow: auto;
@@ -34,7 +34,7 @@ a{
   position: absolute;
   top: 0;
   left: 0;
-  height: 36px;
+  height: 38px;
   width: auto;
   overflow-y: auto; 
   direction: rtl;
