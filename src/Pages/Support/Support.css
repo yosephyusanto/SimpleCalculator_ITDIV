@@ -1,0 +1,121 @@
+.support-container{
+  background-color: black;
+  color: white;
+  height: 100vh;
+  padding: 50px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+hr{
+  max-width: 800px;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.description-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* background-color: blue; */
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  /* background-color: red; */
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.button-section {
+  text-align: right;
+  margin-top: 20px;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 16px;
+  background-color: black;
+  border: 2px solid gray;
+  outline: none;
+  color: white;
+  padding: 2px 4px;
+}
+
+textarea{
+  height: 100%;
+}
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: white;
+  opacity: 80%;
+}
+
+input:focus {
+  border-color: orange;
+}
+
+.dashed-border {
+  border: 2px dashed gray;
+  padding: 20px;
+}
+
+.support-send-btn{
+  font-family: inherit;
+  font-size: 24px;
+  color: white;
+  background-color: orange;
+  padding: 4px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.description-section span{
+  opacity: 70%;
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px){
+  .support-container{
+    height: 100%;
+  }
+  .form-row{
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .input-column{
+    width: 100%;
+  }
+}

@@ -1,31 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-html{
-  box-sizing: border-box;
-  height: 100%;
-  font-family: "Poppins";
-}
-
-*,
-*::before,
-*::after{
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  height: inherit;
-}
-
-#root{
+.calc-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: inherit;
+  height: 100vh;
 }
 
 a{
@@ -33,21 +10,41 @@ a{
   text-decoration: none;
 }
 
-.wrapper{
+.calc-wrapper{
   background-color: black;
   flex-basis: 400px;
   height: 540px;
   padding: 20px 35px;
 }
 
-.screen{
+.calc-screen{
   background-color: gray;
   color: white;
   font-size: 35px;
   text-align: right;
-  padding: 20px;
-  /* width: 320px; */
+  padding-top: 40px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 15px;
   overflow: auto;
+  position: relative;
+}
+
+.calc-history-screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36px;
+  width: auto;
+  overflow-y: auto; 
+  direction: rtl;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+.calc-history-res{
+  direction: ltr;
 }
 
 .calc-button-row{
