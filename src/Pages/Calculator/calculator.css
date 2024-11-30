@@ -63,6 +63,7 @@ a{
   font-family: inherit;
   height: 65px;
   border-radius: 50%;
+  border: none;
 }
 
 .calc-button:last-child{
@@ -75,4 +76,8 @@ a{
 
 .double{
   flex-basis: 47%;
+}
+
+.support-btn{
+  background-color: chocolate;
 }
