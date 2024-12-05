@@ -1,4 +1,4 @@
-.support-container{
+.support-container {
   min-height: 100vh;
   background-color: black;
   color: white;
@@ -10,7 +10,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-hr{
+hr {
   max-width: 800px;
 }
 
@@ -27,7 +27,7 @@ form {
   row-gap: 20px;
 }
 
-.description-section{
+.description-section {
   display: flex;
   flex-direction: column;
 }
@@ -59,7 +59,8 @@ form {
   margin-top: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   font-size: 16px;
   background-color: black;
@@ -69,10 +70,9 @@ input, textarea {
   padding: 2px 4px;
 }
 
-textarea{
+textarea {
   height: 100%;
 }
-
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -89,7 +89,7 @@ input:focus {
   padding: 20px;
 }
 
-.support-send-btn{
+.support-send-btn {
   font-family: inherit;
   font-size: 24px;
   color: white;
@@ -99,7 +99,7 @@ input:focus {
   border-radius: 20px;
 }
 
-.description-section span{
+.description-section span {
   opacity: 70%;
   font-size: 12px;
   position: relative;
@@ -107,16 +107,21 @@ input:focus {
   font-weight: 400;
 }
 
-@media screen and (max-width: 768px){
-  .support-container{
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .support-container {
     height: 100%;
   }
-  .form-row{
+  .form-row {
     flex-direction: column;
     row-gap: 20px;
   }
 
-  .input-column{
+  .input-column {
     width: 100%;
   }
 }

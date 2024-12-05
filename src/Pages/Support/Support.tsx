@@ -12,15 +12,34 @@ function SupportTicketForm() {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{ topic?: string }>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    if (name === "topic") {
+      setErrors((prevErrors) => ({ ...prevErrors, topic: "" }));
+    }
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validation
+    const validationErrors: { topic?: string } = {};
+    if (!formData.topic) {
+      validationErrors.topic = "Please select a topic.";
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    console.log(formData);
+
     setFormSubmitted(true);
   };
 
@@ -29,7 +48,7 @@ function SupportTicketForm() {
       <h1>Support Ticket Form</h1>
       <hr />
       {formSubmitted ? (
-        <SupportMessage/>
+        <SupportMessage />
       ) : (
         <form onSubmit={handleSubmit}>
           <section className="form-row">
@@ -109,6 +128,8 @@ function SupportTicketForm() {
                         <label htmlFor="bug">Bug</label>
                       </section>
                     </section>
+                    {/* Error message for topic */}
+                    {errors.topic && <p className="error">{errors.topic}</p>}
                   </div>
                 </section>
               </section>
